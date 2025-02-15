@@ -17,7 +17,7 @@ BuildRequires:	hwdata >= 0.362
 BuildRequires:	meson >= 0.57.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	hwdata >= 0.362
@@ -73,12 +73,12 @@ Statyczna biblioteka display-info.
 %meson \
 	%{!?with_static_libs:--default-library=shared}
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
