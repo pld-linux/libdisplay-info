@@ -5,13 +5,13 @@
 Summary:	EDID and DisplayID library
 Summary(pl.UTF-8):	Biblioteka identyfikatorów EDID i DisplayID
 Name:		libdisplay-info
-Version:	0.2.0
+Version:	0.4.0
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases
 Source0:	https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/%{version}/downloads/%{name}-%{version}.tar.xz
-# Source0-md5:	160d4159a7805823cf0b3b4f86dfa8d4
+# Source0-md5:	af9f07493bd5ff560a98b95ea4c5c129
 URL:		https://gitlab.freedesktop.org/emersion/libdisplay-info
 BuildRequires:	hwdata >= 0.362
 BuildRequires:	meson >= 0.57.0
@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README.md
 %attr(755,root,root) %{_bindir}/di-edid-decode
 %attr(755,root,root) %{_libdir}/libdisplay-info.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libdisplay-info.so.2
+%attr(755,root,root) %ghost %{_libdir}/libdisplay-info.so.4
 
 %files devel
 %defattr(644,root,root,755)
